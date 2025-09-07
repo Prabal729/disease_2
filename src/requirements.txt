@@ -8,7 +8,7 @@ scipy
 
 # Machine Learning Libraries
 scikit-learn
-xgboos
+xgboost
 lightgbm
 catboost
 
@@ -25,3 +25,4 @@ pathlib2
 # Build tools
 setuptools
 wheel
+
