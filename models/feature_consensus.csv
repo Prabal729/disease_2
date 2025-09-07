@@ -1,0 +1,120 @@
+feature,vote_count,methods
+symptom_count,5,"Chi2, Mutual_Info, Random_Forest, RFE, Lasso"
+pain_behind_the_eyes,5,"Chi2, Mutual_Info, Random_Forest, RFE, Lasso"
+red_spots_over_body,5,"Chi2, Mutual_Info, Random_Forest, RFE, Lasso"
+abnormal_menstruation,5,"Chi2, Mutual_Info, Random_Forest, RFE, Lasso"
+family_history,5,"Chi2, Mutual_Info, Random_Forest, RFE, Lasso"
+muscle_weakness,5,"Chi2, Mutual_Info, Random_Forest, RFE, Lasso"
+rusty_sputum,5,"Chi2, Mutual_Info, Random_Forest, RFE, Lasso"
+lack_of_concentration,5,"Chi2, Mutual_Info, Random_Forest, RFE, Lasso"
+receiving_blood_transfusion,5,"Chi2, Mutual_Info, Random_Forest, RFE, Lasso"
+nausea,4,"Mutual_Info, Random_Forest, RFE, Lasso"
+belly_pain,4,"Chi2, Random_Forest, RFE, Lasso"
+mucoid_sputum,4,"Chi2, Random_Forest, RFE, Lasso"
+coma,4,"Chi2, Random_Forest, RFE, Lasso"
+history_of_alcohol_consumption,4,"Chi2, Mutual_Info, RFE, Lasso"
+loss_of_balance,4,"Mutual_Info, Random_Forest, RFE, Lasso"
+loss_of_appetite,4,"Mutual_Info, Random_Forest, RFE, Lasso"
+blister,4,"Chi2, Random_Forest, RFE, Lasso"
+toxic_look_(typhos),4,"Chi2, Random_Forest, RFE, Lasso"
+red_sore_around_nose,4,"Chi2, Random_Forest, RFE, Lasso"
+itching,4,"Mutual_Info, Random_Forest, RFE, Lasso"
+dark_urine,4,"Mutual_Info, Random_Forest, RFE, Lasso"
+chills,4,"Mutual_Info, Random_Forest, RFE, Lasso"
+joint_pain,4,"Mutual_Info, Random_Forest, RFE, Lasso"
+stomach_pain,4,"Mutual_Info, Random_Forest, RFE, Lasso"
+yellowish_skin,4,"Mutual_Info, Random_Forest, RFE, Lasso"
+fatigue,4,"Mutual_Info, Random_Forest, RFE, Lasso"
+headache,4,"Mutual_Info, Random_Forest, RFE, Lasso"
+weight_loss,4,"Mutual_Info, Random_Forest, RFE, Lasso"
+cough,4,"Mutual_Info, Random_Forest, RFE, Lasso"
+breathlessness,4,"Mutual_Info, Random_Forest, RFE, Lasso"
+altered_sensorium,4,"Chi2, Random_Forest, RFE, Lasso"
+polyuria,4,"Chi2, Random_Forest, RFE, Lasso"
+internal_itching,4,"Chi2, Random_Forest, RFE, Lasso"
+abdominal_pain,4,"Mutual_Info, Random_Forest, RFE, Lasso"
+neck_pain,4,"Mutual_Info, Random_Forest, RFE, Lasso"
+chest_pain,4,"Mutual_Info, Random_Forest, RFE, Lasso"
+muscle_pain,4,"Mutual_Info, Random_Forest, RFE, Lasso"
+fast_heart_rate,4,"Chi2, Mutual_Info, Random_Forest, RFE"
+pain_during_bowel_movements,4,"Chi2, Random_Forest, RFE, Lasso"
+yellowing_of_eyes,4,"Mutual_Info, Random_Forest, RFE, Lasso"
+diarrhoea,4,"Mutual_Info, Random_Forest, RFE, Lasso"
+enlarged_thyroid,4,"Chi2, Mutual_Info, RFE, Lasso"
+mild_fever,4,"Mutual_Info, Random_Forest, RFE, Lasso"
+sweating,4,"Mutual_Info, Random_Forest, RFE, Lasso"
+passage_of_gases,4,"Chi2, Random_Forest, RFE, Lasso"
+continuous_feel_of_urine,4,"Chi2, Random_Forest, RFE, Lasso"
+unsteadiness,4,"Chi2, Random_Forest, RFE, Lasso"
+dischromic _patches,3,"Random_Forest, RFE, Lasso"
+stiff_neck,3,"Mutual_Info, RFE, Lasso"
+high_fever,3,"Mutual_Info, Random_Forest, RFE"
+blackheads,3,"Random_Forest, RFE, Lasso"
+nodal_skin_eruptions,3,"Random_Forest, RFE, Lasso"
+irritability,3,"Mutual_Info, Random_Forest, RFE"
+vomiting,3,"Mutual_Info, Random_Forest, RFE"
+acidity,3,"Mutual_Info, RFE, Lasso"
+phlegm,3,"Mutual_Info, Random_Forest, RFE"
+loss_of_smell,3,"Chi2, Mutual_Info, RFE"
+continuous_sneezing,3,"Mutual_Info, Random_Forest, RFE"
+increased_appetite,3,"Chi2, RFE, Lasso"
+slurred_speech,3,"Chi2, RFE, Lasso"
+spotting_ urination,3,"Random_Forest, RFE, Lasso"
+blood_in_sputum,3,"Chi2, RFE, Lasso"
+receiving_unsterile_injections,3,"Chi2, RFE, Lasso"
+knee_pain,3,"Chi2, RFE, Lasso"
+stomach_bleeding,3,"Chi2, RFE, Lasso"
+distention_of_abdomen,3,"Chi2, RFE, Lasso"
+brittle_nails,3,"Chi2, RFE, Lasso"
+yellow_crust_ooze,3,"Chi2, RFE, Lasso"
+hip_joint_pain,3,"Chi2, RFE, Lasso"
+back_pain,3,"Mutual_Info, Random_Forest, RFE"
+palpitations,3,"Chi2, RFE, Lasso"
+skin_peeling,3,"Chi2, Random_Forest, RFE"
+depression,3,"Chi2, Mutual_Info, RFE"
+bruising,3,"Chi2, Random_Forest, RFE"
+malaise,3,"Mutual_Info, Random_Forest, RFE"
+dizziness,2,"Mutual_Info, RFE"
+excessive_hunger,2,"Mutual_Info, RFE"
+indigestion,2,"Mutual_Info, Lasso"
+bladder_discomfort,2,"Random_Forest, RFE"
+dehydration,2,"Random_Forest, RFE"
+swollen_legs,2,"Chi2, RFE"
+redness_of_eyes,2,"Chi2, RFE"
+sinus_pressure,2,"Chi2, RFE"
+runny_nose,2,"Chi2, Mutual_Info"
+congestion,2,"Chi2, RFE"
+burning_micturition,2,"Mutual_Info, RFE"
+irritation_in_anus,2,"Chi2, RFE"
+swelling_joints,2,"Mutual_Info, RFE"
+swollen_extremeties,2,"Chi2, RFE"
+movement_stiffness,2,"Chi2, RFE"
+prominent_veins_on_calf,2,"Chi2, RFE"
+small_dents_in_nails,2,"Chi2, RFE"
+skin_rash,2,"Mutual_Info, RFE"
+muscle_wasting,1,RFE
+shivering,1,RFE
+patches_in_throat,1,RFE
+watering_from_eyes,1,RFE
+pus_filled_pimples,1,RFE
+scurring,1,RFE
+ulcers_on_tongue,1,Lasso
+painful_walking,1,Mutual_Info
+anxiety,1,Chi2
+obesity,1,Mutual_Info
+drying_and_tingling_lips,1,Chi2
+yellow_urine,1,Chi2
+acute_liver_failure,1,Chi2
+swelling_of_stomach,1,Chi2
+throat_irritation,1,Chi2
+bloody_stool,1,Chi2
+puffy_face_and_eyes,1,Chi2
+fluid_overload.1,1,Chi2
+blurred_and_distorted_vision,1,Mutual_Info
+irregular_sugar_level,1,Chi2
+mood_swings,1,Mutual_Info
+restlessness,1,Mutual_Info
+lethargy,1,Mutual_Info
+constipation,1,Mutual_Info
+swelled_lymph_nodes,1,Mutual_Info
+spinning_movements,1,Lasso

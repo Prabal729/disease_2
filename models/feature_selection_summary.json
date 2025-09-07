@@ -1,0 +1,12 @@
+{
+  "original_features": 134,
+  "selected_features": 93,
+  "reduction_ratio": 0.6940298507462687,
+  "methods_used": [
+    "Chi2",
+    "Mutual_Info",
+    "Random_Forest",
+    "RFE",
+    "Lasso"
+  ]
+}
