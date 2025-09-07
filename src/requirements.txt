@@ -13,7 +13,7 @@ lightgbm
 catboost
 
 # Visualization Libraries
-plotl
+plotly
 
 # Data Processing
 joblib
@@ -25,4 +25,5 @@ pathlib2
 # Build tools
 setuptools
 wheel
+
 
