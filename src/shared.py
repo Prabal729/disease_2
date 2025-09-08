@@ -153,28 +153,41 @@ def safe_dataframe_display(df: pd.DataFrame, title: str = "Data", max_rows: int 
 
 @st.cache_resource
 def load_artifacts():
-    base_dir = Path(__file__).resolve().parent.parent
+    # Try multiple base directory strategies for deployment compatibility
+    possible_base_dirs = [
+        Path.cwd(),  # Current working directory (most reliable for deployment)
+        Path(__file__).resolve().parent.parent,  # Relative to this file
+        Path('/app'),  # Docker container app directory
+    ]
+    
+    # Find the correct base directory
+    base_dir = None
+    for candidate in possible_base_dirs:
+        if (candidate / 'models' / 'champion_model.pkl').exists():
+            base_dir = candidate
+            break
+    
+    # If no base directory found, use current working directory
+    if base_dir is None:
+        base_dir = Path.cwd()
+    
     candidates_model = [
         base_dir / 'models' / 'champion_model.pkl',
         Path.cwd() / 'models' / 'champion_model.pkl',
         Path('models') / 'champion_model.pkl',
-        Path('D:/Portfolio/disease/models/champion_model.pkl'),
     ]
     candidates_features = [
         base_dir / 'models' / 'selected_features.pkl',
-        Path.cwd() / 'models' / 'selected_features.pkl',
-        Path('models') / 'selected_features.pkl',
         base_dir / 'models' / 'selected_features.csv',
+        Path.cwd() / 'models' / 'selected_features.pkl',
         Path.cwd() / 'models' / 'selected_features.csv',
+        Path('models') / 'selected_features.pkl',
         Path('models') / 'selected_features.csv',
-        Path('D:/Portfolio/disease/models/selected_features.pkl'),
-        Path('D:/Portfolio/disease/models/selected_features.csv'),
     ]
     candidates_label = [
         base_dir / 'data' / 'processed' / 'label_encoder.pkl',
         Path.cwd() / 'data' / 'processed' / 'label_encoder.pkl',
         Path('data') / 'processed' / 'label_encoder.pkl',
-        Path('D:/Portfolio/disease/data/processed/label_encoder.pkl'),
     ]
 
     model = None
@@ -208,11 +221,42 @@ def load_artifacts():
     except Exception as e:
         st.warning(f"Could not load label encoder: {e}")
 
+    # Debug information for deployment troubleshooting
+    debug_info = {
+        "base_dir": str(base_dir),
+        "model_found": model is not None,
+        "features_found": features is not None and len(features) > 0,
+        "label_encoder_found": label_encoder is not None,
+        "model_path": str(next((p for p in candidates_model if p.exists()), "Not found")),
+        "features_path": str(next((p for p in candidates_features if p.exists()), "Not found")),
+        "label_encoder_path": str(next((p for p in candidates_label if p.exists()), "Not found"))
+    }
+    
+    # Log debug info in case of issues (only show in development)
+    if model is None or not features:
+        st.warning(f"Debug info: {debug_info}")
+    
     return {"model": model, "features": features or [], "label_encoder": label_encoder}
 
 @st.cache_data
 def load_training_data(expected_features: list[str] | None):
-    base_dir = Path(__file__).resolve().parent.parent
+    # Use the same base directory resolution as load_artifacts
+    possible_base_dirs = [
+        Path.cwd(),  # Current working directory (most reliable for deployment)
+        Path(__file__).resolve().parent.parent,  # Relative to this file
+        Path('/app'),  # Docker container app directory
+    ]
+    
+    # Find the correct base directory
+    base_dir = None
+    for candidate in possible_base_dirs:
+        if (candidate / 'data' / 'processed' / 'X_train.csv').exists():
+            base_dir = candidate
+            break
+    
+    # If no base directory found, use current working directory
+    if base_dir is None:
+        base_dir = Path.cwd()
     def read_csv(path: Path):
         return pd.read_csv(path) if path.exists() else None
     X_train = read_csv(base_dir / 'data' / 'processed' / 'X_train.csv')
